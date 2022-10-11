@@ -14,10 +14,8 @@ phases:
     commands:
       - echo Build completed on `date`
 # Include only the files required for your application to run.
+#
 artifacts:
-  files:
-    - public/**/*
-    - src/**/*
-    - package.json
-    - appspec.yml
-    - scripts/**/*
+  type: zip
+  paths:
+    - '*'
