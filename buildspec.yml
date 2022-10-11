@@ -7,7 +7,6 @@ phases:
       - npm -f install
       - npm run build 
       - echo "Packages have been installed"
-      - echon "Storing Build Artifact to the Location"
 artifacts:
   type: zip
   paths:
