@@ -1,0 +1,14 @@
+version: 0.2
+
+phases:
+  build:
+    commands:
+      - echo "Package & Dependicies are getting installed"
+      - npm -f install
+      - npm run build 
+      - echo "Packages have been installed"
+artifacts:
+  type: zip
+  paths:
+    - '*'
+
