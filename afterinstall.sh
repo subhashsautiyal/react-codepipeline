@@ -7,7 +7,7 @@ yum -y install nodejs npm
 
 #Remove Unused Code
 
-rm -rf node_modules
+rm -rf node_modules2
 rm -rf build
 
 #Install node_modules & Make Build
