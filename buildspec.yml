@@ -1,13 +1,20 @@
 version: 0.2
 
 phases:
+  install:
+    runtime-versions:
+      nodejs: 16 
+
+   
+    commands:
+        # install npm
+        - npm install
+       
   build:
     commands:
-      - echo "Package & Dependicies are getting installed"
-      - npm -f install
-      - npm run build 
-      - echo "Packages have been installed"
-      - echon "Storing Build Artifact to the Location"
+        # run build script
+        - npm run-script build
+     
 artifacts:
   type: zip
   paths:
