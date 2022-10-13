@@ -13,7 +13,11 @@ phases:
         - echo Build started on `date` 
         - npm run-script build 
      
+# Include only the files required for your application to run.
 artifacts:
-  type: zip
-  paths:
-    - '*'          
+  files:
+    - public/**/*
+    - src/**/*
+    - package.json
+    - appspec.yml
+    - scripts/**/*          
