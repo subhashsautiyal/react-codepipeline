@@ -4,9 +4,9 @@
 cd /home/ec2-user/server
 
 #_Remove_Unused_Code
-rm -rf node_modules
-rm -rf build
+#rm -rf node_modules
+#rm -rf build
 
 #Install_node_modules_&_Make_React_Build
-npm -f install
+#npm -f install
 npm run build
