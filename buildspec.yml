@@ -1,23 +1,25 @@
 version: 0.2
 
 phases:
-  pre_build:
+  install:
+    runtime-versions:
+      nodejs: 16
+   
     commands:
-        # run build script
-        - echo Build started on `date` 
+        # install npm
         - npm install
        
   build:
     commands:
         # run build script
-        - echo Build started on `date` 
-        - npm run-script build 
+        - npm run-script build
      
-# Include only the files required for your application to run.
 artifacts:
+  # include all files required to run application
+  # notably excluded is node_modules, as this will cause overwrite error on deploy
   files:
     - public/**/*
     - src/**/*
     - package.json
     - appspec.yml
-    - scripts/**/*          
+    - scripts/**/*
